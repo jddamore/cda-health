@@ -6,6 +6,7 @@ const express = require('express');
 const index = fs.readFileSync('./index.html', 'utf-8');
 const favicon = fs.readFileSync('./favicon.ico');
 const schema = fs.readFileSync('./cda_schemas.html', 'utf-8');
+// const example = fs.readFileSync('./SampleCDADocument.xml', 'utf-8');
 const app = express();
 
 let privateKey; 
