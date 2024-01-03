@@ -5,7 +5,9 @@
   "dependencies": {
     "express": "^4.17.1"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "npx nodemon app.js html,js,css"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
