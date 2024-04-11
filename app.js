@@ -4,6 +4,7 @@ const fs = require('fs');
 const express = require('express');
 
 const index = fs.readFileSync('./index.html', 'utf-8');
+const note = fs.readFileSync('./CDA_R2.0_Online_E1_N1_2024MAY_Note_to_Balloters.pdf');
 const favicon = fs.readFileSync('./favicon.ico');
 const schema = fs.readFileSync('./cda_schemas.html', 'utf-8');
 // const example = fs.readFileSync('./SampleCDADocument.xml', 'utf-8');
@@ -37,6 +38,10 @@ app.get(['/cda_schemas.html'], (req, res) => {
 
 app.get(['/', '/index.html'], (req, res) => {
     res.send(index);
+});
+
+app.get(['/CDA_R2.0_Online_E1_N1_2024MAY_Note_to_Balloters.pdf'], (req, res) => {
+  res.send(note);
 });
 
 
